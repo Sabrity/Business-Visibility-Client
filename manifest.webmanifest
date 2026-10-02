@@ -1,0 +1,9 @@
+{
+  "name": "Trader Business Control \u2014 Client",
+  "short_name": "TBC Client",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#14213d",
+  "icons": []
+}
