@@ -10,7 +10,7 @@
         android:theme="@style/Theme.TraderBusinessControl">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.traderbusinesscontrol.client.MainActivity"
             android:exported="true">
 
             <intent-filter>
