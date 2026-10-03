@@ -1,45 +1,5 @@
 package com.traderbusinesscontrol.client;
-
-import android.app.Activity;
-import android.os.Bundle;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
+import android.app.Activity; import android.os.Bundle; import android.webkit.WebView; import android.webkit.WebSettings; import android.webkit.WebViewClient;
 public class MainActivity extends Activity {
-
-    private WebView webView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        webView = new WebView(this);
-
-        WebSettings settings = webView.getSettings();
-
-        settings.setJavaScriptEnabled(true);
-        settings.setDomStorageEnabled(true);
-        settings.setDatabaseEnabled(true);
-        settings.setAllowFileAccess(false);
-        settings.setAllowContentAccess(true);
-
-        webView.setWebViewClient(new WebViewClient());
-
-        webView.loadUrl(
-            "https://sabrity.github.io/trader-business-control-client/"
-        );
-
-        setContentView(webView);
-    }
-
-    @Override
-    public void onBackPressed() {
-
-        if (webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
-    }
+ protected void onCreate(Bundle b){super.onCreate(b); WebView w=new WebView(this); w.setWebViewClient(new WebViewClient()); WebSettings s=w.getSettings(); s.setJavaScriptEnabled(true); s.setDomStorageEnabled(true); s.setAllowFileAccess(true); w.loadUrl("file:///android_asset/index.html"); setContentView(w);}
 }
